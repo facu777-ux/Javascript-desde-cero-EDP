@@ -4,7 +4,14 @@
 // Pidele al usuario que ingrese su edad ( usando prompt() ), y en caso que tenga 18 años o más imprima un mensaje indicandole que puede inscribirse.
 // caso contrario se le indica que no puede inscribirse y la razón.
 // Tu codigo 👇:
+        let edad_usuario = parseInt(prompt("Ingrese su edad: "))
 
+        edad_usuario >= 18 ? alert("Podés inscribirte a un curso") : alert("No podes inscribirte debido a que tu edad es: " + edad_usuario + " , y se requiere tener 18 años o más")
+        if (edad_usuario >= 18) {
+                document.write("Podés inscribirte a un curso")
+        }else{
+                document.write("No podes inscribirte debido a que tu edad es: " + edad_usuario + " , y se requiere tener 18 años o más")
+        }
 
 //_________________________________________
 
@@ -17,6 +24,27 @@
 // Calificación entre 60 y 69: "Suficiente"
 // Calificación menor a 60: "Insuficiente"
 // Tu codigo 👇:
+        let calificacion;
+
+        do {
+                calificacion = parseInt(prompt("Ingrese una calificación del 0 al 100: "))
+        } while (calificacion <= 0);
+
+
+
+        if (calificacion < 60) {
+                alert("Insuficiente")
+                document.write(`Debido a que su calificación es de: ${calificacion}, se especifica como: Insuficiente`)
+        }else if (calificacion >= 60 && calificacion <=69) {
+                alert("Suficiente")
+                document.write(`Debido a que su calificación es de: ${calificacion}, se especifica como: Suficiente`)
+        }else if (calificacion >= 70 && calificacion <=89) {
+                alert("Bueno")
+                document.write(`Debido a que su calificación es de: ${calificacion}, se especifica como: Bueno`)
+        }else if (calificacion >= 90) {
+                alert("Excelente")
+                document.write(`Debido a que su calificación es de: ${calificacion}, se especifica como: Excelente`)
+        }
 
 
 //_________________________________________
@@ -26,6 +54,21 @@
 // Ejercicio N° 2:
 // Escribe un programa que solicite al usuario ingresar un número entero y luego determine si es par o impar.
 // Tu codigo 👇:
+
+        let Num;
+
+        do {
+                Num = parseInt(prompt("Ingrese un número entero"));
+                if (Num % 1 !== 0) {
+                        alert("Por favor, ingrese un número entero.");
+                }
+        } while (Num % 1 !== 0);
+
+        if (Num % 2 === 0) {
+                document.write("El número ingresado es par")
+        }else{
+                document.write("El número ingresado es impar")
+        }
 
 
 //_________________________________________
@@ -37,6 +80,34 @@
 // Por ejemplo, si el usuario ingresa 1, el programa debe imprimir "Lunes".
 // Tu codigo 👇:
 
+        let numero;
+
+        do{
+                numero = parseInt(prompt(
+                        `Porfavor, ingrese un número del 1 al 7, teniendo en cuenta que:
+                        1: LUNES
+                        2: MARTES
+                        3: MIÉRCOLES
+                        4: JUEVES
+                        5: VIERNES
+                        6: SÁBADO
+                        7: DOMINGO
+                        Su número:....`
+                ));
+
+                if (numero <= 0 || numero > 7) {
+                        alert("El numero a ingresar tiene que ser del 1 al 7");
+                }
+        }while(numero <= 0 || numero > 7);
+
+        if (numero === 1) document.write("LUNES")
+        if (numero === 2) document.write("MARTES")
+        if (numero === 3) document.write("MIERCOLES")
+        if (numero === 4) document.write("JUEVES")
+        if (numero === 5) document.write("VIERNES")
+        if (numero === 6) document.write("SABADO")
+        if (numero === 7) document.write("DOMINGO")
+
 
 //_________________________________________
 
@@ -47,6 +118,20 @@
 // Si la antigüedad es mayor o igual a 5 años, y el salario es menor a $500,
 // el programa debe imprimir un mensaje que indique que el empleado es elegible para una bonificación del 10% de su salario actual.
 // Tu codigo 👇:
+        let salario, antiguedad;
+
+        do {
+                antiguedad = parseInt(prompt("Ingrese su antiguedad, en años, en la empresa: ....."));
+                salario = parseInt(prompt("Ingrese su salario: ...."));
+        } while (salario < 0 || antiguedad < 0);
+
+        if (antiguedad >= 5 && salario < 500){
+                document.write("Felicitaciones!! Eres elegible para una bonificación del 10% de tu salario actual!") 
+        }else{
+                alert("No cumples con los requisistos para una bonificación del 10 % de tu salario actual");
+                document.write("No cumples con los requisistos para una bonificación del 10 % de tu salario actual");
+        }  
+
 
 
 //_________________________________________
@@ -58,6 +143,16 @@
 // Entre 18 y 65 años: "Adulto"
 // Mayor de 65 años: "Senior"
 // Tu codigo 👇:
+
+        let edad;
+
+        do {
+                edad = parseInt(prompt("Ingrese su edad porfavor:..."))
+        } while (edad < 0);
+
+        if(edad < 18)document.write("Menor de edad")
+        if(edad >=18 && edad <= 65)document.write("Adulto")
+        if(edad > 65)document.write("Senior")
 
 
 //_________________________________________

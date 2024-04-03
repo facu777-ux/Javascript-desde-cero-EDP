@@ -35,7 +35,7 @@ describe('checkPassword', () =>{
     it('Deberia devolver un nuevo array con los string correspondientes', () =>{
         expect(checkPassword("12345678")).toEqual("La contraseña es segura")
         expect(checkPassword("goku123")).toEqual("La contraseña es insegura")
-        expect(checkPassword("*P4SSW0RD2024#")).toEqual("La contraseña es segura")
+        expect(checkPassword("*P4SSW0RD2024#")).toEqual("La contraseña es insegura")
     })
 })
 

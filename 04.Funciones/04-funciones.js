@@ -5,13 +5,30 @@
 //Ejemplo "Bienvenido Leonardo Avila" -> IMPORTANTE la funcion tiene que llamarse 'bienvenida'
 //Tu código:
 
-
+const bienvenida = function saludo(nombre, apellido){
+    return `Bienvenido ${nombre} ${apellido}`
+}
 
 /**********************************************************************************/
 // Crea una funcion el cual cumpla la funcion de una calculadora.. tiene que recibir 3 parametros num1, operador y num2
 // IMPORTANTE -> la funcion debe llamarse 'calc'
 // Tu código:
 
+
+const calc = function calculadora(num1, operador, num2){
+    switch (operador) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "/":
+            return num1 / num2;
+        case "*":
+            return num1 * num2;    
+        default:
+            break;
+    }
+}
 
 
 /**********************************************************************************/
@@ -25,7 +42,21 @@
 // IMPORTANTE -> la funcion debe llamarse 'temp'    
 // Tu código:
 
+let mensaje = "";
+const temp = function temperatura(temp_Max, temp_Min, por_lluvia){
+    if (temp_Max < 15){
+        mensaje = 'Es recomendable salir con abrigo';
+    } 
+    if (temp_Max < 26 && temp_Min > 17){
+        mensaje = 'El día está lindo';
+    } 
+    if (temp_Max > 25){
+        mensaje = 'El día estará caluroso' ;
+    } 
+    if(por_lluvia > 50) mensaje += ", recomendable un paraguas";
 
+    return mensaje
+}
 
 /**********************************************************************************/
 
@@ -33,7 +64,7 @@
 // Si la contraseña contiene 8 caracteres, devolver "La contraseña es segura", en caso contrario devolver "La contraseña es insegura"
 // IMPORTANTE -> la funcion debe llamarse 'checkPassword'
 // Tu código:
-
+const checkPassword = (contrasena) => contrasena.length === 8 ? "La contraseña es segura" : "La contraseña es insegura";   
 
 
 
@@ -42,7 +73,9 @@
 // IMPORTANTE -> la funcion debe llamarse 'stringInverso'
 // Tu código:
 
-
+const stringInverso = function palabra(cadena) {
+    return cadena.split('').reverse().join('')
+}
 
 /**********************************************************************************/
 
