@@ -1,6 +1,11 @@
 function arrayDuplicados(array){
     // Por parametros recibiras un array de numeros, tendras que el array duplicado! Usa: Metodo .map()
     // Tu codigo:
+    const duplicados = array.map(function(numero){
+        return numero * 2;
+    })
+
+    return duplicados
 
 }
 
@@ -9,6 +14,8 @@ const nombresPersonas = (array) => {
     // Usa metodo .map().. Ayuda => la propiedad de los nombres es => name.
     // Tu codigo:
 
+    return array.map(persona => persona.name);
+
 }
 
 function masImpuestos(array){
@@ -16,6 +23,8 @@ function masImpuestos(array){
     // Ejemplo: {producto: 'Zapatillas Nike', nSerie: 1511440, precio: $1000}. Deberias devolver => {producto: 'Zapatillas Nike', nSerie: 1511440, precio: 1000, Impuestos: 100}
     // Usar metodo .map()
     // Tu codigo:
+
+    
 
 }
 
