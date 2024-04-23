@@ -23,10 +23,10 @@ function masImpuestos(array){
     // Ejemplo: {producto: 'Zapatillas Nike', nSerie: 1511440, precio: $1000}. Deberias devolver => {producto: 'Zapatillas Nike', nSerie: 1511440, precio: 1000, Impuestos: 100}
     // Usar metodo .map()
     // Tu codigo:
-
     
-
 }
+//REVISAR
+
 
 function NombresLargos(array){
     // Usando metodo Filter(), deberás retornar todos los nombres que superen una longitud mayor o igual a 5  (FILTER)
